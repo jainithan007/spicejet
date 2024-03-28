@@ -24,7 +24,6 @@ public class SelectFlight extends ProjectSpecifications{
 	}
 	
 	public void selectFlight() throws InterruptedException, AWTException {
-		Thread.sleep(2000);
 		utilities.click(continueButton);
 	}
 	

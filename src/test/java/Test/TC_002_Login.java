@@ -15,12 +15,11 @@ import Utilies.Utilities;
 public class TC_002_Login extends ProjectSpecifications{
 	HomePage homePage;
 	LoginPage loginPage;
-//	Utilities utility= new Utilities();
-	
+
 	@BeforeTest
 	public void setup() {
-		excelFile = "";
-		excelSheet = 0;
+		excelFile = "Sheet";
+		excelSheet = 1;
 	}
 	
 	

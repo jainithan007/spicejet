@@ -3,13 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="Test.TC_001_Signin"/>
-      <class name="Test.Payment"/>
-      <class name="Test.SelectFlightTest"/>
       <class name="Test.PassengersDetailsTest"/>
-      <class name="Test.TC_004_Roundtrip"/>
-      <class name="Test.TC_002_Login"/>
-      <class name="Test.TC_003_Onewaytrip"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

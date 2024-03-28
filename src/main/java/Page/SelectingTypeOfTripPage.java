@@ -57,7 +57,7 @@ public class SelectingTypeOfTripPage extends ProjectSpecifications {
                 break;
             }
             
-            System.out.println("========"+expectedMonth.getText()+"     "+ monthYear);
+            System.out.println("==="+expectedMonth.getText()+"     "+ monthYear);
             WebElement NextButton=driver.findElement(By.xpath("(//div[@data-testid='undefined-calendar-picker']//div)[1]"));
             NextButton.click();
             Thread.sleep(2000);
