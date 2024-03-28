@@ -1,3 +1,4 @@
+
 package Test;
 
 import java.awt.AWTException;
@@ -10,15 +11,15 @@ import Page.HomePage;
 import Page.SignUpPage;
 
 
-public class TC_001_Signin extends ProjectSpecifications{
+public class TC_001_SignUp extends ProjectSpecifications{
 	
-	HomePage homePage;
+    HomePage homePage;
 	SignUpPage signUpPage;	
 	
 	@BeforeTest
 	public void setup() {
 		excelFile = "Sheet";
-		excelSheet = 0;
+		excelSheet = 1;
 	}
 	
 	

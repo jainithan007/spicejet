@@ -9,19 +9,15 @@ import org.testng.annotations.Parameters;
 
 import Utilies.Utilities;
 
-public class ProjectSpecifications  extends  Utilities{
 
+
+public class ProjectSpecifications extends Utilities{
 	
-
 	@Parameters({"browser","url"})
 	@BeforeMethod
 	public void launchBrowser(String browser, String url) {
 		browserLaunch(browser,url);
-		
-		
-		
 	}
-	
 	
 	@DataProvider(name = "readExcel")
 	public String[][] getExceldata() throws IOException {
@@ -29,14 +25,8 @@ public class ProjectSpecifications  extends  Utilities{
 		return data;
 	}
 
-	
-
 	@AfterMethod
 	public void closeDriver(){
 		driver.close();
 	}
 }
-
-
-
-     

@@ -16,44 +16,41 @@ import org.openqa.selenium.support.ui.Select;
 import Base.ProjectSpecifications;
 import Utilies.Utilities;
 
-//public class Signinpage extends ProjectSpecifications {
-	public class SignUpPage extends ProjectSpecifications {
-
+public class SignUpPage extends ProjectSpecifications {
 	
 	Utilities utility = new Utilities();
     @FindBy(xpath = "//select[contains(@class,'form-control form-select ')]")
     public WebElement genderDropdown;
 
     @FindBy(xpath = "(//input[@type='text'])[1]")
-    public WebElement firstName;
+    public WebElement firstNameTextField;
 
     @FindBy(xpath = "(//input[@type='text'])[2]")
-    public WebElement lastName;
+    public WebElement lastNameTextField;
 
     @FindBy(xpath = "(//input[contains(@type,'text')])[3]")
-    public WebElement dob;
+    public WebElement dobField;
 
     @FindBy(xpath = "//input[contains(@class,' form-control')]")
-    public WebElement mobileNum;
+    public WebElement mobileNoField;
 
     @FindBy(xpath = "//input[@type='text'][contains(@id,'id')]")
-    public WebElement emailText;
+    public WebElement emailTextField;
 
     @FindBy(xpath = "(//input[@type='password'])[1]")
-    public WebElement passwordText;
+    public WebElement passwordTextField;
 
     @FindBy(xpath = "(//input[@type='password'])[2]")
-    public WebElement confirmPassword;
+    public WebElement confirmPasswordTextField;
 
     @FindBy(xpath = "//input[@type='checkbox']")
     public WebElement checkbox;
 
     @FindBy(xpath = "//button[@type='button']")
-    public WebElement submitButton;
+    public WebElement submitBtn;
 
 
     public SignUpPage(WebDriver driver){
-
     	PageFactory.initElements(driver, this);
 		this.driver=driver;
        
@@ -64,24 +61,24 @@ import Utilies.Utilities;
     	Thread.sleep(5000);
     	utility.click(genderDropdown);
     	new Select(genderDropdown).selectByIndex(1);
-    	utility.sendkeys(firstName,fNmae);
+    	utility.sendkeys(firstNameTextField,fNmae);
         Thread.sleep(1000);
-        utility.sendkeys(lastName,lName);
+        utility.sendkeys(lastNameTextField,lName);
         Thread.sleep(1000);
-        new Actions(driver).click(dob).sendKeys(Dob).sendKeys(Keys.ENTER).perform();
+        new Actions(driver).click(dobField).sendKeys(Dob).sendKeys(Keys.ENTER).perform();
         Thread.sleep(1000);
-        new Actions(driver).click(mobileNum).sendKeys(mobileNo+Keys.ENTER).perform();
+        new Actions(driver).click(mobileNoField).sendKeys(mobileNo+Keys.ENTER).perform();
         Thread.sleep(1000);
-        new Actions(driver).click(emailText).sendKeys(emailId+Keys.TAB).perform();
+        new Actions(driver).click(emailTextField).sendKeys(emailId+Keys.TAB).perform();
         Thread.sleep(2000);
-        utility.sendkeys(passwordText,PSWD);
+        utility.sendkeys(passwordTextField,PSWD);
         Thread.sleep(1000);
-        utility.sendkeys(confirmPassword,CPSWD);
+        utility.sendkeys(confirmPasswordTextField,CPSWD);
         Thread.sleep(1000);
         Thread.sleep(1000);	
         checkbox.click();
         Thread.sleep(1000);
-        utility.click(submitButton);
+        utility.click(submitBtn);
 
     }
 }

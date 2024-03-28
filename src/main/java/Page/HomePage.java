@@ -15,7 +15,7 @@ public class HomePage extends Utilities {
     public WebElement loginButton;
 
     @FindBy(xpath = "(//div[@dir='auto'])[48]")
-    public WebElement signUpButton;
+    public  WebElement signUpButton;
 
     public HomePage(WebDriver driver) {
     	
